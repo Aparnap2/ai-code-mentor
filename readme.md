@@ -27,7 +27,7 @@ ide-docker-py/
 │── src/                # Fastify backend for LLM & execution
 │   ├── server.js       # Main backend API (LLM + Docker execution)
 │   ├── config.js       # Configuration settings
-│   ├── codeExecutor.js # Handles Python code execution in Docker
+│  
 │── docker-compose.yml  # Containerized setup for easy deployment
 │── package.json        # Backend dependencies
 │── README.md           # Project documentation
@@ -52,15 +52,10 @@ pnpm install  # Install Fastify & Hugging Face SDK
 export HF_TOKEN="your_huggingface_api_key"
 ```
 
-### **4️⃣ Build & Run Docker Environment**
-```sh
-cd python-secure
-docker build -t secure-python-executor .
-```
 
 ### **5️⃣ Start Backend Server**
 ```sh
-cd src
+cd ide-docker-py
 pnpm start
 ```
 
@@ -84,14 +79,11 @@ pnpm dev
 ## 🐳 Docker Execution
 ### **Building & Running the Secure Python Container**
 ```sh
-cd python-secure
-docker build -t secure-python-executor .
-docker run --rm secure-python-executor
+cd ide-docker-py
+sudo docker-compose -f docker-compose.yml up --build
+
 ```
-### **Stopping Containers**
-```sh
-docker stop secure-python-executor
-```
+
 
 ---
 
@@ -122,5 +114,5 @@ docker stop secure-python-executor
 ---
 
 ## ⚖️ License
-This project is open-source under the **MIT License**.
+This project is open-source under the **GNU Public License**.
 
