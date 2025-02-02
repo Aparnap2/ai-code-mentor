@@ -1,5 +1,8 @@
 # 🛠️ AI-Powered Python Code Execution
 
+[Watch the video](https://github.com/Aparnap2/ai-code-mentor/blob/main/out.mp4)
+
+
 ## 📌 Project Overview
 This project provides a **secure AI-powered Python code execution environment**. Users can input natural language prompts, and the system:
 1. Uses **Hugging Face LLM** to generate Python code.
